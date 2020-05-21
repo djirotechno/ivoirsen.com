@@ -22,7 +22,7 @@
           <div class="col-md-6 ftco-animate">
             <h1 class="mb-4">Nous répondons à vos enjeux et à vos problématiques d’études,</h1>
            
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
+            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
           </div>
         </div>
         </div>
@@ -35,7 +35,7 @@
           <div class="col-md-6 ftco-animate">
             <h1 class="mb-4">Comprendre de manière approfondie vos cibles,vos collaborateur</h1>
            
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
+            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
           </div>
         </div>
         </div>
@@ -47,7 +47,7 @@
           <div class="col-md-6 ftco-animate">
             <h1 class="mb-4">Dégager les opportunités de croissance pour votre marque</h1>
            
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
+            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
           </div>
         </div>
         </div>
@@ -59,7 +59,7 @@
           <div class="col-md-6 ftco-animate">
             <h1 class="mb-4">Guider votre réflexion, vos prises de décisions et plans d’action</h1>
            
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
+						<p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
           </div>
         </div>
         </div>

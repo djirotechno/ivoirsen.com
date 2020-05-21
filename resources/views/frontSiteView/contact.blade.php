@@ -18,7 +18,7 @@
           <div class="col-md-3 d-flex">
           	<div class="bg-light align-self-stretch box p-4 text-center">
                 @foreach ($contact as $item)
-                @if($item->pays == 'senegal')
+                @if($item->pays == 'Sénégal')
             <h3 class="mb-4">{!!$item->pays!!}</h3>
             <p>{!!$item->adresse!!}</p>
             <p>{!!$item->telephone!!}</p>
@@ -40,8 +40,8 @@
           <div class="col-md-3 d-flex">
           	<div class="bg-light align-self-stretch box p-4 text-center">
           		<h3 class="mb-4">Addresse Email</h3>
-	            <p><a href="mailto:info@yoursite.com">info@ivoirsen.com</a></p>
-	            <p><a href="mailto:info@yoursite.com">contact@ivoirsen.com</a></p>
+	            <p><a href="mailto:info@yoursite.com">ivoirsen@ivoirsen.com</a></p>
+	            {{-- <p><a href="mailto:info@yoursite.com">contact@ivoirsen.com</a></p> --}}
 	          </div>
           </div>
         </div>

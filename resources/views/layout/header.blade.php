@@ -46,9 +46,9 @@
 					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
 					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
 						    <div class="text">
-						    	<span>Telephone</span>
-						    	<span>SN: +221 77 000 00 00</span>
-						    	<span>C I: +221 77 000 00 00</span>
+						    	<span>Téléphone</span>
+						    	<span>SN: +221 77 319 02 49</span>
+						    	{{-- <span>C I: +221 77 000 00 00</span> --}}
 						    </div>
 					    </div>
 					    <div class="col-md topper d-flex align-items-center justify-content-end">
@@ -79,7 +79,7 @@
 	        	<li class="nav-item"><a href="/acceuil" class="nav-link pl-0">Acceuil</a></li>
 	        	<li class="nav-item"><a href="/apropos" class="nav-link">Qui sommes nous</a></li>
 						<li class="nav-item"><a href="/domaine" class="nav-link">Nos Solutions </a></li>
-						<li class="nav-item"><a href="/solution" class="nav-link">Domaines d'activites</a></li>
+						<li class="nav-item"><a href="/solution" class="nav-link">Domaines d’activités</a></li>
 						<li class="nav-item"><a href="/formation" class="nav-link">Notre Catalogue</a></li>
 						 {{-- <li class="nav-item"><a href="/expert" class="nav-link">Nos Experts</a></li> --}}
 	          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
