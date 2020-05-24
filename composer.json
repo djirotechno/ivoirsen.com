@@ -6,7 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*",
+        "laravel/framework": "5.3.*",
         "dwij/laraadmin": "1.0.40",
         "dwij/laeditor": "^0.1.6"
     },
