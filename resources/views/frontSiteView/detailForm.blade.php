@@ -162,7 +162,7 @@
                                 </div>
                                     <form action="/instcrit" method="POST" class="appointment-form ftco-animate" >
                                         {{ csrf_field() }}
-                                    <input type="hidden" name="idForm" value="{{$formation->id}}">
+                                   
                                         <div class="d-md-flex">
                                             <div class="form-group">
                                                 <input type="text" class="form-control" name="nom" placeholder="Nom">
@@ -176,10 +176,10 @@
                                             <div class="form-field">
                                                 <div class="select-wrap">
                                                     <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                                        <select name="formation" id="" class="form-control">
-                                                            <option value="formation">Formations</option>
+                                                        <select name="idForm" id="" class="form-control">
+                                                            <option value="">Formations</option>
                                                                 @foreach ($formation as $item)
-                                                            <option value="{{$item->nom}}">{{$item->nom}}</option>
+                                                            <option value="{{$item->titre}}">{{$item->titre}}</option>
                                                                 @endforeach
                                                         </select>
                                                     </div>
@@ -205,7 +205,7 @@
                 </div>
             </div>
 		</section>
-
+        {{-- temoignage beneficiaire --}}
         <section class="ftco-section testimony-section">
             <div class="container">
                 <div class="row justify-content-center mb-5 pb-2">
@@ -253,17 +253,18 @@
             <div class="modal-body">
                 <form action="/inscription" method="post">  
                     {{ csrf_field() }}
+                <input type="hidden" name="idForm" value="{{$detailForm->titre}}">
                   <div class="form-group row">
-                              <label for="role" class="col-md-4 col-form-label text-md-right">Nom</label>
-                              <div class="col-md-6">
-                              <input id="nom" type="text" class="form-control{{ $errors->has('nom') ? ' is-invalid' : '' }}"  name="nom"  value="{{ old('nomParcelle') }}"required autofocus>
-      
-                                  @if ($errors->has('nom'))
-                                      <span class="invalid-feedback" role="alert">
-                                          <strong>{{ $errors->first('nom') }}</strong>
-                                      </span>
-                                  @endif
-                              </div>
+                        <label for="role" class="col-md-4 col-form-label text-md-right">Nom</label>
+                        <div class="col-md-6">
+                        <input id="nom" type="text" class="form-control{{ $errors->has('nom') ? ' is-invalid' : '' }}"  name="nom"  value="{{ old('nomParcelle') }}"required autofocus>
+
+                            @if ($errors->has('nom'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('nom') }}</strong>
+                                </span>
+                            @endif
+                        </div>
                       </div>
                       <div class="form-group row">
                           <label for="role" class="col-md-4 col-form-label text-md-right">Prenom</label>

@@ -7,8 +7,9 @@
               <div class="block-23 mb-3">
                 <ul>
                   <li><span class="icon icon-map-marker"></span><span class="text"></span>Sud foire cité BASS niang villa 32,DAKAR/SENEGAL BP:22 608 </li>
-                  <li><a href="#"><span class="icon icon-phone"></span><span class="text"></span>TEL : 77319 02 49</a></li>
-                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text"></span>ivoirsen@ivoirsen.com</a></li>     
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text"></span>TEL SN: +221 77319 02 49</a></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text"></span>TEL CI: +225 48 54 33 66</a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text"></span>info@ivoiresn.com</a></li>     
                 </ul>
               </div>
           </div>

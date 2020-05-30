@@ -40,7 +40,7 @@
 					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
 					    	<div class="text">
 					    		<span>Email</span>
-						    	<span>ivoirsen@ivoirsen.com</span>
+						    	<span>info@ivoiresn.com</span>
 						    </div>
 					    </div>
 					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
@@ -48,7 +48,7 @@
 						    <div class="text">
 						    	<span>Téléphone</span>
 						    	<span>SN: +221 77 319 02 49</span>
-						    	{{-- <span>C I: +221 77 000 00 00</span> --}}
+						    	<span>CI: +225 48 54 33 66</span>
 						    </div>
 					    </div>
 					    <div class="col-md topper d-flex align-items-center justify-content-end">
@@ -66,7 +66,7 @@
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container d-flex align-items-center px-4">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
+	        <span class="oi oi-menu"></span>
 	      </button>
 	      {{-- <form action="#" class="searchform order-lg-last">
           <div class="form-group d-flex">
@@ -76,8 +76,8 @@
         </form> --}}
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav mr-auto">
-	        	<li class="nav-item"><a href="/acceuil" class="nav-link pl-0">Acceuil</a></li>
-	        	<li class="nav-item"><a href="/apropos" class="nav-link">Qui sommes nous</a></li>
+	        	<li class="nav-item"><a href="/acceuil" class="nav-link pl-0">Accueil</a></li>
+	        	<li class="nav-item"><a href="/apropos" class="nav-link">Qui sommes nous ?</a></li>
 						<li class="nav-item"><a href="/domaine" class="nav-link">Nos Solutions </a></li>
 						<li class="nav-item"><a href="/solution" class="nav-link">Domaines d’activités</a></li>
 						<li class="nav-item"><a href="/formation" class="nav-link">Notre Catalogue</a></li>

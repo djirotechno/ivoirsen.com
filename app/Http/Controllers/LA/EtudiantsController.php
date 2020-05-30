@@ -23,7 +23,7 @@ class EtudiantsController extends Controller
 {
 	public $show_action = true;
 	public $view_col = 'nom';
-	public $listing_cols = ['id', 'nom', 'prenom', 'email', 'telephone'];
+	public $listing_cols = ['id', 'nom', 'prenom', 'email', 'telephone', 'formation'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

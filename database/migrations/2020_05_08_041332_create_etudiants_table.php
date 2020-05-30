@@ -22,6 +22,7 @@ class CreateEtudiantsTable extends Migration
             ["prenom", "prenom", "String", false, "", 0, 256, true],
             ["email", "email", "Email", false, "", 0, 256, true],
             ["telephone", "telephone", "Integer", false, "", 0, 11, true],
+            ["formation", "formation_id", "String", false, "", 0, 256, false],
         ]);
 		
 		/*

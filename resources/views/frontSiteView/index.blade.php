@@ -1,13 +1,19 @@
 @include('layout.header')
     <!-- END nav -->
-    
+    <style>
+		h1{
+			font-style: italic;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+		}
+		
+		</style>
     <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image:url(images/bg_1.jpg);">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">Quel que soit votre secteur d’activité.</h1>
+            <h1 class="mb-4">Quel que soit votre secteur d’activité</h1>
             
             <p><a href="/contact" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
           </div>
@@ -20,7 +26,7 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">Nous répondons à vos enjeux et à vos problématiques d’études,</h1>
+            <h1 class="mb-4">Nous répondons à vos enjeux et à vos problématiques d’études</h1>
            
             <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
           </div>
@@ -33,7 +39,7 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">Comprendre de manière approfondie vos cibles,vos collaborateur</h1>
+            <h1 class="mb-4">Comprendre de manière approfondie vos cibles,vos collaborateurs</h1>
            
             <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
           </div>
@@ -76,9 +82,10 @@
             		<span class="flaticon-teacher"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Analyse de données</h3>
-                <p>Nous permettons au client d’identifier les opportunités à partir d’analyse de données et d’améliorer ses performances.</p>
-                <p>identification, analyse du marché, avant-projets, faisabilité technique et économique </p>
+								<h3 class="heading">Analyse de données</h3>
+								<p>Mesurer et suivre le marché, observer les tendances, extraire les informations, guider vos prises de décisions</p>
+                {{-- <p>Nous permettons au client d’identifier les opportunités à partir d’analyse de données et d’améliorer ses performances.</p>
+                <p>identification, analyse du marché, avant-projets, faisabilité technique et économique </p> --}}
               </div>
             </div>      
           </div>
@@ -90,11 +97,9 @@
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">Suivi-évaluation</h3>
-                <p>Projet et Programme</p>
-									
-									<p>
-											Nous vous aidons à développer et/ou renforcer un plan de suivi et d’évaluation pour les projets/programmes respectifs en utilisant les données de suivi et évaluation pour la prise de décision
-									</p>
+								<p>Développer et/ou renforcer un plan de suivi-évaluation,
+									contribuer à l’amélioration de l’efficacité des Projets/Programmes 
+								</p>
               </div>
             </div>      
           </div>
@@ -104,10 +109,10 @@
             		<span class="flaticon-diploma"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">consultance</h3>
-                <p> Conception et réalisation de produits de formation</p> 
-									<p>Formation de formateurs </p>
-									Identification des besoins en formation établissement et mise en œuvre de plans de formation évaluation des résultats.</p>
+                <h3 class="heading">Renforcement de capacités</h3>
+                <p> Renforçer les capacités de vos professionnels dans l'analyse de données et le suivi-évaluation des Projets/Programmes</p> 
+								
+					
               </div>
             </div>      
           </div>
@@ -122,16 +127,16 @@
 					</div>
 					<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
           	<h2 class="mb-4">Nos Metiers</h2>
-						<p style="text-align:justify">IVOIRSEN apporte les meilleures solutions aux besoins particuliers de chaque projet en tenant compte des meilleures pratiques. Nos experts-formateurs et nos conseillers capitalisent plusieurs années d’expériences, tant académique que professionnelle. Pédagogues, méticuleux et rompus à la tâche, ils partagent avec vous leur expérience sectorielle et professionnelle du terrain. </p>
+						<p style="text-align:justify">IVOIRESN apporte les meilleures solutions aux besoins particuliers de chaque projet en tenant compte des meilleures pratiques. Nos experts-formateurs et nos conseillers capitalisent plusieurs années d’expériences, tant académique que professionnelle. Pédagogues, méticuleux et rompus à la tâche, ils partagent avec vous leur expérience sectorielle et professionnelle du terrain. </p>
 						<div class="row mt-5">
 							<div class="col-lg-6">
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-security"></span></div>
 									<div class="text pl-3">
 										<h3>Collecte Analyse de Donnees</h3>
-										<p style="text-align:">
+										<p style="text-align:justify">
 												Mesurer et suivre le marché, observer les tendances, extraire les informations Guider vos prises de décisions</p>
-.
+												<a href="#" data-toggle="modal" data-target="#anaData">suit...</a>
 									</div>
 								</div>
 							</div>
@@ -139,9 +144,10 @@
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-reading"></span></div>
 									<div class="text pl-3">
-										<h3>études économique </h3>
-										<p>Appui au développement des ressources humaines en milieu administratif et en entreprise ;
-												Études macroéconomiques et sectorielles, développement de modèles </p>
+										<h3>Etudes économique </h3>
+										<p style="text-align:">Appui au développement des ressources humaines en milieu administratif et en entreprise;
+										 </p>
+												<a href="#" data-toggle="modal" data-target="#eco">suit...</a>
 									</div>
 								</div>
 							</div>
@@ -149,8 +155,9 @@
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-diploma"></span></div>
 									<div class="text pl-3">
-										<h3>suivi et evaluation projet</h3>
-										Ivoiresn vous propose de contribuer à l’amélioration de l’efficacité des Projets/Programmes en renforçant les capacités de vos professionnels dans le suivi et l’évaluation des Projets/Programmes
+										<h3>Suivi et evaluation projet</h3>
+										<p style="align-text:justify">IVOIRESN vous propose de contribuer à l’amélioration de l’efficacité des Projets/Programmes en</p>
+										<a href="#" data-toggle="modal" data-target="#suiviEval">suit...</a>
 									</div>
 								</div>
 							</div>
@@ -159,7 +166,8 @@
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-education"></span></div>
 									<div class="text pl-3">
 										<h3>Renforcement de capacites</h3>
-										<p style="text-align:justify">IVOIRSEN propose des prestations de renforcement de capacité et d’appui institutionnel de qualité, axées sur les résultats, et ciblées sur les problématiques spécifiques de votre organisation.</p>
+										<p style="text-align:justify">IVOIRESN propose des prestations de renforcement de capacité et d’appui institutionnel de qualité.</p>
+										<a href="#" data-toggle="modal" data-target="#renfCapa">suit...</a>
 									</div>
 								</div>
 							</div>
@@ -181,8 +189,8 @@
     				</div>
     			</div>
           <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
-            <h2 class="mb-4">Ivoirsen</h2>
-            <p>IVOIRESN a pour objectif principal de contribuer à la création d'une masse critique de cadres, de hauts fonctionnaires et de décideurs hautement qualifiés qui seront adéquatement outillés pour recueillir, analyser et interpréter des données relatives à la planification, la mise en œuvre et le suivi/évaluation au sein des organisations, des entreprises, des projets et programmes aux niveaux national, sous régional et régional.  </p>
+            <h2 class="mb-4">IVOIRESN</h2>
+            <p style="align-text:'justify';font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">IVOIRESN a pour objectif principal de contribuer à la création d'une masse critique de cadres, de hauts fonctionnaires et de décideurs hautement qualifiés qui seront adéquatement outillés pour recueillir, analyser et interpréter des données relatives à la planification, la mise en œuvre et le suivi-évaluation au sein des organisations, des entreprises, des projets et programmes aux niveaux national, sous régional et régional.  </p>
             
           </div>
         </div>	
@@ -263,7 +271,7 @@
 			              </div>
 			    				</div>
 		    					<div class="form-group ml-md-4">
-			    					<input type="number" class="form-control" name="telephone" placeholder="Phone" required>
+			    					<input type="number" class="form-control" name="telephone" placeholder="Telephone" required>
 			    				</div>
 		    				</div>
 		    				<div class="d-md-flex">
@@ -331,4 +339,29 @@
 								@endforeach --}}
 	
 		
-   @include('layout.footer');
+	 @include('layout.footer');
+	 
+{{-- Analyse donnee --}}
+
+@foreach ($metier as $item)
+<div id="{{$item->idmetier}}" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				
+			<h3>{{$item->Metiers}}</h3>
+			</div>
+			<div class="modal-body">
+			<p>{!!$item->description!!}</p>
+		</div>
+	</div>
+</div>
+</div>
+@endforeach
+	 
+	{{-- suivi-évaluation --}}
+
+	
+	

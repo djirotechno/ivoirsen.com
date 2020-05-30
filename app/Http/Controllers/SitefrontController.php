@@ -20,6 +20,7 @@ use App\Models\Cvpdg;
 use App\Models\Etudiant;
 use App\Models\Solution;
 use App\Models\RendezVouse;
+use App\Models\Metier;
 
 class SitefrontController extends Controller
 {
@@ -47,6 +48,8 @@ class SitefrontController extends Controller
             $rv->message = $request->input('message');
 
             $rv->save();
+
+            return back();
     }
 
     public function solution(){
@@ -58,14 +61,17 @@ class SitefrontController extends Controller
     }
 
     public function acceuil(){
+
+        $metier = Metier::get();
+        
         $part = Partenaire::get();
-      
         $tem  = Temoignage::where('profile', 'autres')->get();
         $img = Upload::get();
         return view('frontSiteView.index',[
             'tem' => $tem,
             'img' => $img,
             'part' => $part,
+            'metier' => $metier
         ]);
     }
 
@@ -125,13 +131,15 @@ class SitefrontController extends Controller
         $img = Upload::get();
         $intervs = Intervenent::get();
         $detailForm = Catalogue::find($id);
+        $formation = Catalogue::get();
         $tem  = Temoignage::where('profile', 'etudiants')->get();
         return view('frontSiteView.detailForm',
         
         ['detailForm'=> $detailForm,
         'img'=> $img,
         'intervs' => $intervs,
-        'tem' => $tem
+        'tem' => $tem,
+        'formation' => $formation
         ]
     );
     }
@@ -178,6 +186,7 @@ class SitefrontController extends Controller
         $inscrit->prenom = $request->input('prenom');
         $inscrit->telephone = $request->input('telephone');
         $inscrit->email = $request->input('email');
+        $inscrit->formation = $request->input('idForm');
 
         
         $inscrit->save();

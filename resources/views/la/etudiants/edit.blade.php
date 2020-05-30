@@ -37,6 +37,7 @@
 					@la_input($module, 'prenom')
 					@la_input($module, 'email')
 					@la_input($module, 'telephone')
+					@la_input($module, 'formation')
 					--}}
                     <br>
 					<div class="form-group">

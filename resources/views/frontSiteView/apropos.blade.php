@@ -26,13 +26,10 @@
                   <div class="row">
                     <div class="col-lg-12">
                       <blockquote class="generic-blockquote">
-                          Dr. DIAKITE Ouéi Karim est  Maitre - Assistant à la faculté d’économie de l’Université Peleforo Gbon Coulibaly de Korhogo en Côte d’Ivoire. 
-                          Docteur en économie, Il anime plusieurs séminaires en technique d’enquête, en analyse de données et en suivis évaluation
-                          DIAKITE Ouéi Karim compte plusieurs années d’expérience comme formateur et en tant que personne ressource auprès de plusieurs institutions d’intégration sous régionale et de réseaux africains de recherche et de formation comme IDEP et FAS.
-                          Ses principaux travaux de recherche traitent d’économie de développement, particulièrement en matière de santé, d’agriculture, d’éducation, d’intégration africaine
-                          Son expérience du métier lui fait dire que malgré les progrès récents,  l’Afrique est encore en  retard dans le domaine de la connaissance, la maîtrise, la bonne exploitation des données, même si le potentiel est considérable. Fort de ce constat, il a creé ivoirsen, afin de former une masse critique de cadres, de hauts fonctionnaires et de décideurs qui seront adéquatement outillés pour rattraper ce retard.
-                          A travers IVOIRSEN, il met ainsi le développent de l’Afrique au cœur de ses préoccupations, en transmettant et mettant  a profils son expérience
-                      </blockquote>
+                           Expert-formateur dans plusieurs structures d’enseignement supérieur (UCAD, CESAG, UPGC, SUPDECO, ISM...), expérimenté et pédagogue, Dr. DIAKITE Ouéi Karim est consultant au pret des nations unies(UNIDEP) et des ONG(FAS). Il partage avec vous son expérience du terrain et illustre ses propos par de nombreux cas concrets. Il met à votre disposition l’expérience professionnelle et sectorielle acquise à partir de IVOIRESN sous la forme de « bonnes pratiques ». 
+                          <p>Fort de l’expérience de plus de 10 ans de formation et de notre capacité à assurer notre présence dans les pays dans lesquels s’exercent vos responsabilités, IVOIRESN s’engage à être un véritable partenaire à votre écoute, prêt à vous accompagner pour apporter de la valeur ajoutée à vos projets.</p>                          
+                          <p><a href="/cv"> Dr. DIAKITE Ouéi Karim PGG</a></p>
+                        </blockquote>
                     </div>
                   </div>
                 </div>
@@ -47,7 +44,7 @@
             </p>
 					
 						
-						<p><a href="/cv">Mr DIAKITE PDG</a></p>
+						
 					</div>
 				</div>
 			</div>
@@ -225,11 +222,9 @@
           </div>
         </div>
       </div> --}}
-      <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
-        <h2 class="mb-4">Nos Cibles</h2>
-        
-        
-      </div>
+      <div class="col-md-8 text-center heading-section ftco-animate">
+          <h2 class="mb-4">Nos Cibles</h2>
+        </div>
     </div>	
     <div class="row d-md-flex align-items-center justify-content-center">
       <div class="col-lg-12">
@@ -239,7 +234,7 @@
             <div class="block-18">
               <div class="icon"><span class="flaticon-doctor"></span></div>
               <div class="text">
-                <strong class="number" >Gouvernements</strong>
+                <strong class="number">Gouvernements</strong>
                
               </div>
             </div>
@@ -248,7 +243,7 @@
             <div class="block-18">
               <div class="icon"><span class="flaticon-doctor"></span></div>
               <div class="text">
-                <strong class="number">Administrations</strong>
+                <strong class="number">Administrations et les organismes publics</strong>
               
               </div>
             </div>
@@ -273,7 +268,7 @@
               <div class="block-18">
                 <div class="icon"><span class="flaticon-doctor"></span></div>
                 <div class="text">
-                  <strong class="number">Entreprises</strong>
+                  <strong class="number">Entreprises, publiques et privées</strong>
                  
                 </div>
               </div>
@@ -287,7 +282,7 @@
               <div class="block-18">
                 <div class="icon"><span class="flaticon-doctor"></span></div>
                 <div class="text">
-                  <strong class="number" >Étudiants</strong>
+                  <strong class="number" >Les organismes d'aide au développement</strong>
                   
                 </div>
               </div>
@@ -306,6 +301,15 @@
                 </div>
               </div>
             </div>
+            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                  <div class="icon"><span class="flaticon-doctor"></span></div>
+                  <div class="text">
+                    <strong class="number">Université</strong>
+                  
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
       </div>

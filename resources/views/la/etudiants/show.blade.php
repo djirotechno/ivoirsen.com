@@ -111,6 +111,7 @@
 						@la_display($module, 'prenom')
 						@la_display($module, 'email')
 						@la_display($module, 'telephone')
+						@la_display($module, 'formation')
 					</div>
 				</div>
 			</div>
