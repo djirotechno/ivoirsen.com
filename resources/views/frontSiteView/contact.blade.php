@@ -52,18 +52,19 @@
 			<div class="container">
 				<div class="row d-flex align-items-stretch no-gutters">
 					<div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
-						<form action="#">
-              <div class="form-group">
+            <form action="/email" method="POST">
+              {{ csrf_field() }}
+              {{-- <div class="form-group">
                 <input type="text" class="form-control" placeholder="Nom">
+              </div> --}}
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="email">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Email">
+                <input type="text" class="form-control" placeholder="sujet">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Sujet">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="message"></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Envoyez" class="btn btn-primary py-3 px-5">

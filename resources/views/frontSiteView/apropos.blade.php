@@ -1,6 +1,10 @@
 @include('layout.header')
     <!-- END nav -->
-    
+    <style>
+    strong{
+      margin: 15px;
+    }
+    </style>
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
       <div class="overlay"></div>
       <div class="container">
@@ -149,61 +153,23 @@
       <div class="row ftco-animate justify-content-center">
         <div class="col-md-12">
           <div class="carousel-testimony owl-carousel">
-            <div class="item">
-              <div class="testimony-wrap d-flex">
-                <div class="user-img mr-4" style="background-image: url()">
-                </div>
-                <div class="text ml-2">
-                    <p class="name"><h2>La promptitude</h2> </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimony-wrap d-flex">
-                <div class="user-img mr-4" style="background-image: url()">
-                </div>
-                <div class="text ml-2">
-                    <p class="name"><h2>La ponctualité</h2></p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimony-wrap d-flex">
-                <div class="user-img mr-4" style="background-image: url()">
-                </div>
-                <div class="text ml-2">
-                    <p class="name"><h2>Le contrôle de la qualité</h2></p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimony-wrap d-flex">
-                <div class="user-img mr-4" style="background-image: url()">
-                </div>
-                <div class="text ml-2">
-                    <p class="name"><h2>Le travail en équipe</h2></p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimony-wrap d-flex">
-                <div class="user-img mr-4" style="background-image: url()">
-                </div>
-                <div class="text ml-2">
-                  <p class="name"><h2>La démarche participative</h2></p>
-                </div>
-              </div>
-            </div>
+            @foreach ($valeur as $item)
             <div class="item">
                 <div class="testimony-wrap d-flex">
-                  <div class="user-img mr-4" style="background-image: url()">
+                  <div class=" mr-4">
+                  <p class="name"> <h3>{!!$item->titre!!}</h3></p>
                   </div>
                   <div class="text ml-2">
-                    <p class="name">
-                      <h2>L'indépendance</h2>
-                    </p>
+                  	{{-- <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span> --}}
+                    <p style="paddind:5px;">{!!$item->description!!}</p>
+                   
                   </div>
                 </div>
+            </div>
+            @endforeach
+              </div>
               </div>
           </div>
         </div>
@@ -243,11 +209,27 @@
             <div class="block-18">
               <div class="icon"><span class="flaticon-doctor"></span></div>
               <div class="text">
-                <strong class="number">Administrations et les organismes publics</strong>
-              
+                <strong class="number">Administrations</strong>
               </div>
             </div>
           </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+              <div class="block-18">
+                <div class="icon"><span class="flaticon-doctor"></span></div>
+                <div class="text">
+                  <strong class="number">Organismes</strong>
+                  <strong class="number">publics</strong>
+                </div>
+              </div>
+            </div>
+            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                  <div class="icon"><span class="flaticon-doctor"></span></div>
+                  <div class="text">
+                   <strong class="number"> Organismes </strong><strong class="number">privées</strong>
+                  </div>
+                </div>
+              </div>
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="icon"><span class="flaticon-doctor"></span></div>
@@ -268,7 +250,8 @@
               <div class="block-18">
                 <div class="icon"><span class="flaticon-doctor"></span></div>
                 <div class="text">
-                  <strong class="number">Entreprises, publiques et privées</strong>
+                  <strong class="number">Entreprises</strong>
+                  <strong class="number">publiques</strong>
                  
                 </div>
               </div>
@@ -279,28 +262,13 @@
             <br>
             <br>
             <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="icon"><span class="flaticon-doctor"></span></div>
-                <div class="text">
-                  <strong class="number" >Les organismes d'aide au développement</strong>
-                  
+                <div class="block-18">
+                  <div class="icon"><span class="flaticon-doctor"></span></div>
+                  <div class="text">
+                    <strong class="number" >Chercheurs</strong>
+                  </div>
                 </div>
               </div>
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="icon"><span class="flaticon-doctor"></span></div>
-                <div class="text">
-                  <strong class="number" >Chercheurs</strong>
-                  
-                </div>
-              </div>
-            </div>
             <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
                 <div class="block-18">
                   <div class="icon"><span class="flaticon-doctor"></span></div>

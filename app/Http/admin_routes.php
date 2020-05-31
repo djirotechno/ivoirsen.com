@@ -140,4 +140,8 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== Metiers ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/metiers', 'LA\MetiersController');
 	Route::get(config('laraadmin.adminRoute') . '/metier_dt_ajax', 'LA\MetiersController@dtajax');
+
+	/* ================== Valeurs ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/valeurs', 'LA\ValeursController');
+	Route::get(config('laraadmin.adminRoute') . '/valeur_dt_ajax', 'LA\ValeursController@dtajax');
 });

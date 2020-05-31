@@ -9,6 +9,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Models\Temoignage;
+use App\Models\Partenaire;
 use App\Models\Upload;
 /**
  * Class HomeController
@@ -33,7 +34,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-
+        $part = Partenaire::get();
         $tem  = Temoignage::where('profile', 'autres')->get();
         $img = Upload::get();
         $roleCount = \App\Role::count();
@@ -41,7 +42,8 @@ class HomeController extends Controller
 			if($roleCount != 0) {
 				return view('frontSiteView.index',[
                     'tem' => $tem,
-                    'img' => $img
+                    'img' => $img,
+                    'part'=>$part
                 ]);
 			}
 		} else {

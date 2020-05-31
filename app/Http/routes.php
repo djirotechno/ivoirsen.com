@@ -32,8 +32,7 @@ Route::get('/expert','SitefrontController@expert');
 Route::get('/formation/{detail}','SitefrontController@detailFormation');
 Route::post('/inscription','SitefrontController@inscription');
 Route::get('/cv','SitefrontController@curiculum');
-
-
+Route::post('email','MailController@html_email');
 
 /* ================== Homepage + Admin Routes ================== */
 

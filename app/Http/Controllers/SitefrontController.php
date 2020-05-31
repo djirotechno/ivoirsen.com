@@ -21,6 +21,7 @@ use App\Models\Etudiant;
 use App\Models\Solution;
 use App\Models\RendezVouse;
 use App\Models\Metier;
+use App\Models\Valeur;
 
 class SitefrontController extends Controller
 {
@@ -79,14 +80,15 @@ class SitefrontController extends Controller
     public function apropos()
     {
         //
-      
+      $valeur = Valeur::get();
       
         $apropos = Apropo::get(); 
         $img = Upload::get();
         return view('frontSiteView.apropos',[
             'apropos'=> $apropos,
           
-            'img'=> $img
+            'img'=> $img,
+            'valeur' => $valeur
             
         ]);
     }
@@ -203,4 +205,5 @@ class SitefrontController extends Controller
             'cv' => $cv
         ]);
     }
+    
 }
