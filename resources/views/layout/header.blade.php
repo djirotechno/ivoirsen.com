@@ -76,7 +76,7 @@
         </form> --}}
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav mr-auto">
-	        	<li class="nav-item"><a href="/acceuil" class="nav-link pl-0">Accueil</a></li>
+	        	<li class="nav-item"><a href="/" class="nav-link pl-0">Accueil</a></li>
 	        	<li class="nav-item"><a href="/apropos" class="nav-link">Qui sommes nous ?</a></li>
 						<li class="nav-item"><a href="/domaine" class="nav-link">Nos Solutions </a></li>
 						<li class="nav-item"><a href="/solution" class="nav-link">Domaines d’activités</a></li>

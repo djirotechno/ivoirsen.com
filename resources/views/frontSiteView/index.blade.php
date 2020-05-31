@@ -136,7 +136,7 @@
 										<h3>Collecte Analyse de Donnees</h3>
 										<p style="text-align:justify">
 												Mesurer et suivre le marché, observer les tendances, extraire les informations Guider vos prises de décisions</p>
-												<a href="#" data-toggle="modal" data-target="#anaData">suit...</a>
+												<a href="#" data-toggle="modal" data-target="#anaData">Detail...</a>
 									</div>
 								</div>
 							</div>
@@ -147,7 +147,7 @@
 										<h3>Etudes économique </h3>
 										<p style="text-align:">Appui au développement des ressources humaines en milieu administratif et en entreprise;
 										 </p>
-												<a href="#" data-toggle="modal" data-target="#eco">suit...</a>
+												<a href="#" data-toggle="modal" data-target="#eco">Detail...</a>
 									</div>
 								</div>
 							</div>
@@ -157,7 +157,7 @@
 									<div class="text pl-3">
 										<h3>Suivi et evaluation projet</h3>
 										<p style="align-text:justify">IVOIRESN vous propose de contribuer à l’amélioration de l’efficacité des Projets/Programmes en</p>
-										<a href="#" data-toggle="modal" data-target="#suiviEval">suit...</a>
+										<a href="#" data-toggle="modal" data-target="#suiviEval">Detail...</a>
 									</div>
 								</div>
 							</div>
@@ -167,7 +167,7 @@
 									<div class="text pl-3">
 										<h3>Renforcement de capacites</h3>
 										<p style="text-align:justify">IVOIRESN propose des prestations de renforcement de capacité et d’appui institutionnel de qualité.</p>
-										<a href="#" data-toggle="modal" data-target="#renfCapa">suit...</a>
+										<a href="#" data-toggle="modal" data-target="#renfCapa">Detail...</a>
 									</div>
 								</div>
 							</div>
@@ -343,23 +343,23 @@
 	 
 {{-- Analyse donnee --}}
 
-@foreach ($metier as $item)
-<div id="{{$item->idmetier}}" class="modal fade" role="dialog">
-	<div class="modal-dialog">
+		@foreach ($metier as $item)
+		<div id="{{$item->idmetier}}" class="modal fade" role="dialog">
+			<div class="modal-dialog">
 
-		<!-- Modal content-->
-		<div class="modal-content">
-			<div class="modal-header">
-				
-			<h3>{{$item->Metiers}}</h3>
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						
+					<h3>{{$item->Metiers}}</h3>
+					</div>
+					<div class="modal-body">
+					<p>{!!$item->description!!}</p>
+				</div>
 			</div>
-			<div class="modal-body">
-			<p>{!!$item->description!!}</p>
 		</div>
-	</div>
-</div>
-</div>
-@endforeach
+		</div>
+		@endforeach
 	 
 	{{-- suivi-évaluation --}}
 

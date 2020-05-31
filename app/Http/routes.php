@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Route::get('/solution','SitefrontController@solution');
 Route::post('/rv','SitefrontController@rv');
-Route::get('/acceuil','SitefrontController@acceuil');
+// Route::get('/acceuil','SitefrontController@acceuil');
 Route::get('/apropos','SitefrontController@apropos');
 Route::get('/domaine','SitefrontController@domaine');
 Route::get('/contact','SitefrontController@contact');

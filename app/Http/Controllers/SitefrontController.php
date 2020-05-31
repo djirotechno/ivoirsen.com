@@ -61,20 +61,20 @@ class SitefrontController extends Controller
         ]);
     }
 
-    public function acceuil(){
+    // public function acceuil(){
 
-        $metier = Metier::get();
+    //     $metier = Metier::get();
         
-        $part = Partenaire::get();
-        $tem  = Temoignage::where('profile', 'autres')->get();
-        $img = Upload::get();
-        return view('frontSiteView.index',[
-            'tem' => $tem,
-            'img' => $img,
-            'part' => $part,
-            'metier' => $metier
-        ]);
-    }
+    //     $part = Partenaire::get();
+    //     $tem  = Temoignage::where('profile', 'autres')->get();
+    //     $img = Upload::get();
+    //     return view('frontSiteView.index',[
+    //         'tem' => $tem,
+    //         'img' => $img,
+    //         'part' => $part,
+    //         'metier' => $metier
+    //     ]);
+    // }
 
   
     public function apropos()

@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use App\Models\Temoignage;
 use App\Models\Partenaire;
 use App\Models\Upload;
+use App\Models\Metier;
 /**
  * Class HomeController
  * @package App\Http\Controllers
@@ -33,7 +34,7 @@ class HomeController extends Controller
      * @return Response
      */
     public function index()
-    {
+    {    $metier = Metier::get();
         $part = Partenaire::get();
         $tem  = Temoignage::where('profile', 'autres')->get();
         $img = Upload::get();
@@ -43,7 +44,8 @@ class HomeController extends Controller
 				return view('frontSiteView.index',[
                     'tem' => $tem,
                     'img' => $img,
-                    'part'=>$part
+                    'part'=>$part,
+                    'metier' => $metier
                 ]);
 			}
 		} else {
