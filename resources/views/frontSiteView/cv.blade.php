@@ -155,8 +155,8 @@
                      
                       <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                       <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                      <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                      <li class="ftco-animate"><a href="#"><span class="icon-linkedin"></span></a></li>
+                      <li class="ftco-animate"><a href="https://web.facebook.com/ivoiresn.ivoiresn.7"><span class="icon-facebook"></span></a></li>
+                      <li class="ftco-animate"><a href="https://www.linkedin.com/in/ivoiresn-ivoiresn-3416091ab/"><span class="icon-linkedin"></span></a></li>
                     </ul>
                   </div>
                   </div>

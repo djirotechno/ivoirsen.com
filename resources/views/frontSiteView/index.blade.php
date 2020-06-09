@@ -13,7 +13,7 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">Quel que soit votre secteur d’activité</h1>
+            <h1 class="mb-4">Quelque soit votre secteur d’activité</h1>
             
             <p><a href="/contact" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
           </div>
@@ -28,7 +28,7 @@
           <div class="col-md-6 ftco-animate">
             <h1 class="mb-4">Nous répondons à vos enjeux et à vos problématiques d’études</h1>
            
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
+            <p><a href="/contact" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
           </div>
         </div>
         </div>
@@ -39,9 +39,9 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">Comprendre de manière approfondie vos cibles,vos collaborateurs</h1>
+            <h1 class="mb-4">Comprendre de manière approfondie vos cibles vos collaborateurs</h1>
            
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
+            <p><a href="/contact" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
           </div>
         </div>
         </div>
@@ -53,7 +53,7 @@
           <div class="col-md-6 ftco-animate">
             <h1 class="mb-4">Dégager les opportunités de croissance pour votre marque</h1>
            
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
+            <p><a href="/contact" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
           </div>
         </div>
         </div>
@@ -63,9 +63,9 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">Guider votre réflexion, vos prises de décisions et plans d’action</h1>
+            <h1 class="mb-4">Guider votre réflexion vos prises de décisions et plans d’action</h1>
            
-						<p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
+						<p><a href="/contact" class="btn btn-primary px-4 py-3 mt-3">Contact</a></p>
           </div>
         </div>
         </div>
@@ -83,7 +83,7 @@
               </div>
               <div class="media-body p-2 mt-3">
 								<h3 class="heading">Analyse de données</h3>
-								<p>Mesurer et suivre le marché, observer les tendances, extraire les informations, guider vos prises de décisions</p>
+								<p>Mesurer et suivre le marché observer les tendances, extraire les informations guider vos prises de décisions</p>
                 {{-- <p>Nous permettons au client d’identifier les opportunités à partir d’analyse de données et d’améliorer ses performances.</p>
                 <p>identification, analyse du marché, avant-projets, faisabilité technique et économique </p> --}}
               </div>
@@ -134,9 +134,9 @@
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-security"></span></div>
 									<div class="text pl-3">
 										<h3>Collecte Analyse de Donnees</h3>
-										<p style="text-align:justify">
+										<p>
 												Mesurer et suivre le marché, observer les tendances, extraire les informations Guider vos prises de décisions</p>
-												<a href="#" data-toggle="modal" data-target="#anaData">Detail...</a>
+												<a href="#" data-toggle="modal" data-target="#anaData">Details</a>
 									</div>
 								</div>
 							</div>
@@ -145,9 +145,9 @@
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-reading"></span></div>
 									<div class="text pl-3">
 										<h3>Etudes économique </h3>
-										<p style="text-align:">Appui au développement des ressources humaines en milieu administratif et en entreprise;
+										<p>Appui au développement des ressources humaines en milieu administratif et en entreprise;
 										 </p>
-												<a href="#" data-toggle="modal" data-target="#eco">Detail...</a>
+												<a href="#" data-toggle="modal" data-target="#eco">Details</a>
 									</div>
 								</div>
 							</div>
@@ -156,8 +156,8 @@
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-diploma"></span></div>
 									<div class="text pl-3">
 										<h3>Suivi et evaluation projet</h3>
-										<p style="align-text:justify">IVOIRESN vous propose de contribuer à l’amélioration de l’efficacité des Projets/Programmes en</p>
-										<a href="#" data-toggle="modal" data-target="#suiviEval">Detail...</a>
+										<p>IVOIRESN vous propose de contribuer à l’amélioration de l’efficacité des Projets/Programmes en</p>
+										<a href="#" data-toggle="modal" data-target="#suiviEval">Details</a>
 									</div>
 								</div>
 							</div>
@@ -166,8 +166,8 @@
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-education"></span></div>
 									<div class="text pl-3">
 										<h3>Renforcement de capacites</h3>
-										<p style="text-align:justify">IVOIRESN propose des prestations de renforcement de capacité et d’appui institutionnel de qualité.</p>
-										<a href="#" data-toggle="modal" data-target="#renfCapa">Detail...</a>
+										<p>IVOIRESN propose des prestations de renforcement de capacité et d’appui institutionnel de qualité.</p>
+										<a href="#" data-toggle="modal" data-target="#renfCapa">Details</a>
 									</div>
 								</div>
 							</div>
@@ -180,9 +180,9 @@
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-2 d-flex">
     			<div class="col-md-6 align-items-stretch d-flex">
-    				<div class="img img-video d-flex align-items-center" style="background-image: url(images/about-2.jpg);">
+    				<div class="img img-video d-flex align-items-center" style="background-image: url(images/about3.jpg);">
     					<div class="video justify-content-center">
-								<a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+								<a href="https://assets.mixkit.co/videos/preview/mixkit-people-working-on-a-wooden-table-3247-large.mp4" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
 									<span class="ion-ios-play"></span>
 		  					</a>
 							</div>
@@ -248,8 +248,9 @@
 		            <h2 class="mb-4">Prendre Rendez-vous</h2>
 		            {{-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p> --}}
 		          </div>
-		          <form action="/rv" method="POST" class="appointment-form ftco-animate">
+						<form action="{{url(emailrv)}}" method="POST" class="appointment-form ftco-animate">
 								{{ csrf_field() }}
+								<input type="hidden" name="subject" value="Rendez-vous">
 		    				<div class="d-md-flex">
 			    				<div class="form-group">
 			    					<input type="email" class="form-control" name="email" placeholder="Email" required>
@@ -260,24 +261,20 @@
 										<div class="form-group">
 											<input type="text" class="form-control" name="nom" placeholder="Nom" required>
 										</div>
-										<div class="form-group ml-md-4">
-											<input type="text" class="form-control" name="prenom" placeholder="Prenom" required>
-										</div>
 									</div>
 		    				<div class="d-md-flex">
-		    					<div class="form-group">
-			    					<div class="form-field">
-												<input type="date" class="form-control" name="date" placeholder="Date" required>
-			              </div>
-			    				</div>
 		    					<div class="form-group ml-md-4">
-			    					<input type="number" class="form-control" name="telephone" placeholder="Telephone" required>
-			    				</div>
-		    				</div>
+			    					<input type="text" class="form-control" name="telephone" placeholder="Telephone" required>
+									</div>
+									
+								</div>
+								<div class="d-md-flex">
+									<div class="form-group">
+										<textarea  id="" cols="30" rows="2" class="form-control" name="message" placeholder="Message" required></textarea>
+									</div>
+								</div>
 		    				<div class="d-md-flex">
-		    					<div class="form-group">
-			              <textarea  id="" cols="30" rows="2" class="form-control" name="message" placeholder="Message" required></textarea>
-			            </div>
+		    				
 			            <div class="form-group ml-md-4">
 			              <input type="submit" value="Valider" class="btn btn-primary py-3 px-4">
 			            </div>

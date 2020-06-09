@@ -22,7 +22,7 @@ use App\Models\Solution;
 use App\Models\RendezVouse;
 use App\Models\Metier;
 use App\Models\Valeur;
-
+use DB;
 class SitefrontController extends Controller
 {
     //
@@ -115,7 +115,8 @@ class SitefrontController extends Controller
     public function formation()
     {
         //
-        $formation = Catalogue::get();
+        $formation = DB::table('catalogues')->paginate(8);
+  
         $img = Upload::get();
         $formateur = Intervenent::get();
         $tem  = Temoignage::where('profile', 'etudiants')->get();
@@ -205,5 +206,40 @@ class SitefrontController extends Controller
             'cv' => $cv
         ]);
     }
+
+    public function stat(){
+        $formation = Catalogue::get();
+        $list = Catalogue::where('code','STAT')->paginate(8);
+        $statana = Catalogue::where('code','STATANA')->paginate(8);
+        $msad = Catalogue::where('code','MSAD')->paginate(8);
+        $msrm = Catalogue::where('code','MSRM')->paginate(8);
+        $ceeq = Catalogue::where('code','CEEQ')->paginate(8);
+        $st = Catalogue::where('code','ST')->paginate(8);
+        $econom = Catalogue::where('code','ECONOM')->paginate(8);
+        $logic = Catalogue::where('code','LOGIC')->paginate(8);
+
+        $img = Upload::get();
+        $formateur = Intervenent::get();
+        $tem  = Temoignage::where('profile', 'etudiants')->get();
+        return view('frontSiteView.stat',[
+
+           
+            'img' => $img,
+            'tem' => $tem,
+            'formateur' => $formateur,
+            'formation' => $formation,
+            'list' => $list,
+            'statana' => $statana,
+            'msad'=> $msad,
+            'msrm' => $msrm,
+            'ceeq' => $ceeq,
+            'st' => $st,
+            'econom' => $econom,
+            'logic' => $logic
+            ]);
+            
+    }
+
+  
     
 }

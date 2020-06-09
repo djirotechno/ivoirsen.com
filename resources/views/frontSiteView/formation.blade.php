@@ -11,39 +11,49 @@
           </div>
         </div>
       </div>
-    </section>
+		</section>
+		<br>
+		<br>
+		<div class="container mt-3">
+			<h2>Panoramas</h2>
+			<p>En un ou deux jours, les panoramas visent à donner une vision globale mais précise d’un domaine de la statistique.</p>
+	</div>
 <section class="ftco-section">
+	
 	<div class="container-fluid px-4">
 		<div class="row">
-@foreach ($formation as $item)
+				@foreach ($formation as $item)
 
-			<div class="col-md-3 course ftco-animate">
-				@foreach ($img as $image)
-					@if($item->image == $image->id)
-					<img class="img align-self-stretch"  src="{{$image->path()}}">
-					@endif
+							<div class="col-md-3 course ftco-animate">
+								@foreach ($img as $image)
+									@if($item->image == $image->id)
+									<img class="img align-self-stretch"  src="{{$image->path()}}">
+									@endif
+								@endforeach
+								<div class="text pt-4">
+									<p class="meta d-flex">
+										@foreach ($formateur as $form)
+											@if($form->id ==  $item->intervenant)
+											<span><i class="icon-user mr-2"></i>{{$form->nom}}</span>
+											@endif
+										@endforeach
+									<span><i class="icon-table mr-2"></i>{{$item->duree}}-jour</span>
+									<span><i class="icon-calendar mr-2"></i>{{$item->date}}</span>
+									</p>
+									<h3><a href="#">{{$item->titre}}</a></h3>
+									<p>{{$item->description}}</p>
+								<p><a href="/formation/{{$item->id}}" class="btn btn-primary">Details</a></p>
+								</div>
+							</div>
 				@endforeach
-				<div class="text pt-4">
-					<p class="meta d-flex">
-						@foreach ($formateur as $form)
-							@if($form->id ==  $item->intervenant)
-							<span><i class="icon-user mr-2"></i>{{$form->nom}}</span>
-							@endif
-						@endforeach
-					<span><i class="icon-table mr-2"></i>{{$item->duree}}-jour</span>
-					<span><i class="icon-calendar mr-2"></i>{{$item->date}}</span>
-					</p>
-				  <h3><a href="#">{{$item->titre}}</a></h3>
-					<p>{{$item->description}}</p>
-				<p><a href="/formation/{{$item->id}}" class="btn btn-primary">Details</a></p>
-				</div>
-			</div>
-@endforeach
+
 		</div>
 	</div>
+	<div class="col-12 text-center">
+	<button type="button" class="btn btn-primary btn-block"><a href="{{url(statistique)}}"><strong style="font-size:25px;color:black">Méthodes statistiques</strong></a></button> 
+	</div>
+	
 </section>
-    
-
 		<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(images/bg_5.jpg);" data-stellar-background-ratio="0.5">
     	<div class="overlay"></div>
     	<div class="container">
@@ -54,29 +64,28 @@
 		            <h2 class="mb-4">Demander un Devis</h2>
 		            
 		          </div>
-		          <form action="#" class="appointment-form ftco-animate">
-									<div class="d-md-flex">
-											<div class="form-group">
-												<input type="email" class="form-control" placeholder="Email">
-											</div>
-									
-										</div>
-		    				<div class="d-md-flex">
-			    				<div class="form-group">
-			    					<input type="text" class="form-control" placeholder="Nom">
-			    				</div>
-			    				<div class="form-group ml-md-4">
-			    					<input type="text" class="form-control" placeholder="Prenom">
-			    				</div>
-								</div>
-								<form action="" method="POST">
+		          <form action="/devis" method="post" class="appointment-form ftco-animate">
+								
+						
 									{{ csrf_field() }}
+									<div class="d-md-flex">
+										<div class="form-group">
+											<input type="email" nom="email" class="form-control" placeholder="Email">
+										</div>
+								
+									</div>
+							<div class="d-md-flex">
+								<div class="form-group">
+									<input type="text" name="nom" class="form-control" placeholder="Nom">
+								</div>
+						
+							</div>
 										<div class="d-md-flex">
 												<div class="form-group">
 													<div class="form-field">
 														<div class="select-wrap">
 															<div class="icon"><span class="ion-ios-arrow-down"></span></div>
-															<select name="" id="" class="form-control">
+															<select name="formation" id="formation" class="form-control">
 																@foreach ($formation as $item)
 															<option value="{{$item->titre}}">{{$item->titre}}</option>																		
 																@endforeach
@@ -85,12 +94,12 @@
 													</div>
 												</div>
 												<div class="form-group ml-md-4">
-													<input type="text" class="form-control" placeholder="Phone">
+													<input type="text" name="telephone" class="form-control" placeholder="Telephone">
 												</div>
 											</div>
 											<div class="d-md-flex">
 												<div class="form-group">
-													<textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
+													<textarea name="message" id="message" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
 												</div>
 												<div class="form-group ml-md-4">
 													<input type="submit" value="Valider" class="btn btn-primary py-3 px-4">
@@ -98,7 +107,7 @@
 											</div>
 								</form>
 		    			
-		    			</form>
+		    			
 		    		</div>
     			</div>
         </div>

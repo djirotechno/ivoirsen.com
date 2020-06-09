@@ -80,7 +80,14 @@
 	        	<li class="nav-item"><a href="/apropos" class="nav-link">Qui sommes nous ?</a></li>
 						<li class="nav-item"><a href="/domaine" class="nav-link">Nos Solutions </a></li>
 						<li class="nav-item"><a href="/solution" class="nav-link">Domaines d’activités</a></li>
-						<li class="nav-item"><a href="/formation" class="nav-link">Notre Catalogue</a></li>
+						<li class="dropdown nav-item">
+								<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Notre Catalogue
+								<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+								<li class="nav-item"><a href="{{url(formation)}}" >Panoramas</a></li>
+									<li class="nav-item"><a href="{{url(statistique)}}" >Méthodes statistiques</a></li>
+								</ul>
+							</li>
 						 {{-- <li class="nav-item"><a href="/expert" class="nav-link">Nos Experts</a></li> --}}
 	          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
 	        </ul>

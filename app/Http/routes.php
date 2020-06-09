@@ -30,9 +30,14 @@ Route::get('/formation','SitefrontController@formation');
 Route::get('/projet','SitefrontController@projet');
 Route::get('/expert','SitefrontController@expert');
 Route::get('/formation/{detail}','SitefrontController@detailFormation');
-Route::post('/inscription','SitefrontController@inscription');
+Route::post('/inscription','MailController@sendinscrit');
 Route::get('/cv','SitefrontController@curiculum');
-Route::post('email','MailController@html_email');
+Route::post('/email','MailController@sendemail');
+Route::post('/emailrv','MailController@sendrv');
+Route::post('/devis','MailController@devis');
+Route::get('statistique','SitefrontController@stat');
+
+
 
 /* ================== Homepage + Admin Routes ================== */
 

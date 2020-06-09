@@ -251,9 +251,10 @@
               <h4 class="modal-title">Inscription</h4>
             </div>
             <div class="modal-body">
-                <form action="/inscription" method="post">  
+            <form action="{{url(inscription)}}" method="POST">  
                     {{ csrf_field() }}
                 <input type="hidden" name="idForm" value="{{$detailForm->titre}}">
+                <input type="hidden" name="subject" value="Inscription">
                   <div class="form-group row">
                         <label for="role" class="col-md-4 col-form-label text-md-right">Nom</label>
                         <div class="col-md-6">
@@ -266,17 +267,7 @@
                             @endif
                         </div>
                       </div>
-                      <div class="form-group row">
-                          <label for="role" class="col-md-4 col-form-label text-md-right">Prenom</label>
-                              <div class="col-md-6">
-                                  <input id="prenom" type="text" class="form-control{{ $errors->has('prenom') ? ' is-invalid' : '' }}"  name="prenom"  value="{{ old('prenom') }}"required autofocus>
-                                  @if ($errors->has('prenom'))
-                                      <span class="invalid-feedback" role="alert">
-                                          <strong>{{ $errors->first('prenom') }}</strong>
-                                      </span>
-                                  @endif
-                              </div>
-                      </div>
+                     
                       <div class="form-group row">
                             <label for="role" class="col-md-4 col-form-label text-md-right">Email</label>
                                 <div class="col-md-6">

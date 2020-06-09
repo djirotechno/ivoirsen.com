@@ -61,7 +61,7 @@
     		
           <div class="col-md-8 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
             <h2 class="mb-4">Objectif</h2>
-          <p>
+          <p style="text-color:">
             @foreach ($apropos as $item)
             {!!$item->vision!!}
             @endforeach
@@ -132,7 +132,7 @@
 			</div>
 			<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
 				<h2 class="mb-4">Notre Vision</h2>
-				<p style="text-align:justify">
+				<p style="color:white">
           @foreach ($apropos as $item)
               {!!$item->mission!!}
           @endforeach

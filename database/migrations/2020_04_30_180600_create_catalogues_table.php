@@ -18,14 +18,14 @@ class CreateCataloguesTable extends Migration
     public function up()
     {
         Module::generate("Catalogues", 'catalogues', 'intervenant', 'fa-book', [
-            ["code", "code", "String", true, "", 0, 256, true],
+            ["code", "code", "String", false, "", 0, 256, true],
             ["titre", "Titre", "String", true, "", 0, 256, true],
             ["objectif", "Objectif", "Textarea", false, "", 0, 0, true],
             ["contenu", "Contenu", "Textarea", false, "", 0, 0, true],
             ["duree", "Duree", "Integer", false, "", 1, 11, false],
             ["date", "Date", "Date", false, "", 0, 0, false],
             ["prix", "Prix", "Float", false, "000", 0, 11, false],
-            ["niveaux", "Nivaux", "Dropdown", false, "", 0, 0, false, ["initiation","intermediaire","Expert"]],
+            ["niveaux", "Nivaux", "Dropdown", false, "", 0, 0, false, ["initiation","intermediaire","Expert","Tout publique"]],
             ["intervenant", "Intervenent", "Dropdown", false, "", 0, 256, false, "@intervenents"],
             ["outilslogiciel", "outilsLogiciel", "TextField", false, "", 0, 256, false],
             ["prerequis", "Prerequis", "TextField", false, "", 0, 256, false],
