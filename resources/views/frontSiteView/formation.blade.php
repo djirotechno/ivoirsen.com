@@ -15,8 +15,8 @@
 		<br>
 		<br>
 		<div class="container mt-3">
-			<h2>Panoramas</h2>
-			<p>En un ou deux jours, les panoramas visent à donner une vision globale mais précise d’un domaine de la statistique.</p>
+			<h2>Analyse de données</h2>
+			<p>En un ou deux jours, nos panoramas visent à donner une vision globale mais précise d’un domaine de la statistique.</p>
 	</div>
 <section class="ftco-section">
 	

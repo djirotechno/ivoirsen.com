@@ -17,37 +17,37 @@ use Collective\Html\FormFacade as Form;
 use Dwij\Laraadmin\Models\Module;
 use Dwij\Laraadmin\Models\ModuleFields;
 
-use App\Models\Catalogue;
+use App\Models\Souspanorama;
 
-class CataloguesController extends Controller
+class SouspanoramasController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'intervenant';
-	public $listing_cols = ['id', 'code', 'titre', 'objectif', 'contenu', 'duree', 'date', 'prix', 'niveaux', 'intervenant', 'outilslogiciel', 'prerequis', 'image', 'panoramas', 'souspanoid'];
+	public $view_col = 'titre';
+	public $listing_cols = ['id', 'titre', 'description'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns
 		if(\Dwij\Laraadmin\Helpers\LAHelper::laravel_ver() == 5.3) {
 			$this->middleware(function ($request, $next) {
-				$this->listing_cols = ModuleFields::listingColumnAccessScan('Catalogues', $this->listing_cols);
+				$this->listing_cols = ModuleFields::listingColumnAccessScan('Souspanoramas', $this->listing_cols);
 				return $next($request);
 			});
 		} else {
-			$this->listing_cols = ModuleFields::listingColumnAccessScan('Catalogues', $this->listing_cols);
+			$this->listing_cols = ModuleFields::listingColumnAccessScan('Souspanoramas', $this->listing_cols);
 		}
 	}
 	
 	/**
-	 * Display a listing of the Catalogues.
+	 * Display a listing of the Souspanoramas.
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index()
 	{
-		$module = Module::get('Catalogues');
+		$module = Module::get('Souspanoramas');
 		
 		if(Module::hasAccess($module->id)) {
-			return View('la.catalogues.index', [
+			return View('la.souspanoramas.index', [
 				'show_actions' => $this->show_action,
 				'listing_cols' => $this->listing_cols,
 				'module' => $module
@@ -58,7 +58,7 @@ class CataloguesController extends Controller
 	}
 
 	/**
-	 * Show the form for creating a new catalogue.
+	 * Show the form for creating a new souspanorama.
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
@@ -68,16 +68,16 @@ class CataloguesController extends Controller
 	}
 
 	/**
-	 * Store a newly created catalogue in database.
+	 * Store a newly created souspanorama in database.
 	 *
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
 	public function store(Request $request)
 	{
-		if(Module::hasAccess("Catalogues", "create")) {
+		if(Module::hasAccess("Souspanoramas", "create")) {
 		
-			$rules = Module::validateRules("Catalogues", $request);
+			$rules = Module::validateRules("Souspanoramas", $request);
 			
 			$validator = Validator::make($request->all(), $rules);
 			
@@ -85,9 +85,9 @@ class CataloguesController extends Controller
 				return redirect()->back()->withErrors($validator)->withInput();
 			}
 			
-			$insert_id = Module::insert("Catalogues", $request);
+			$insert_id = Module::insert("Souspanoramas", $request);
 			
-			return redirect()->route(config('laraadmin.adminRoute') . '.catalogues.index');
+			return redirect()->route(config('laraadmin.adminRoute') . '.souspanoramas.index');
 			
 		} else {
 			return redirect(config('laraadmin.adminRoute')."/");
@@ -95,30 +95,30 @@ class CataloguesController extends Controller
 	}
 
 	/**
-	 * Display the specified catalogue.
+	 * Display the specified souspanorama.
 	 *
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
 	public function show($id)
 	{
-		if(Module::hasAccess("Catalogues", "view")) {
+		if(Module::hasAccess("Souspanoramas", "view")) {
 			
-			$catalogue = Catalogue::find($id);
-			if(isset($catalogue->id)) {
-				$module = Module::get('Catalogues');
-				$module->row = $catalogue;
+			$souspanorama = Souspanorama::find($id);
+			if(isset($souspanorama->id)) {
+				$module = Module::get('Souspanoramas');
+				$module->row = $souspanorama;
 				
-				return view('la.catalogues.show', [
+				return view('la.souspanoramas.show', [
 					'module' => $module,
 					'view_col' => $this->view_col,
 					'no_header' => true,
 					'no_padding' => "no-padding"
-				])->with('catalogue', $catalogue);
+				])->with('souspanorama', $souspanorama);
 			} else {
 				return view('errors.404', [
 					'record_id' => $id,
-					'record_name' => ucfirst("catalogue"),
+					'record_name' => ucfirst("souspanorama"),
 				]);
 			}
 		} else {
@@ -127,28 +127,28 @@ class CataloguesController extends Controller
 	}
 
 	/**
-	 * Show the form for editing the specified catalogue.
+	 * Show the form for editing the specified souspanorama.
 	 *
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
 	public function edit($id)
 	{
-		if(Module::hasAccess("Catalogues", "edit")) {			
-			$catalogue = Catalogue::find($id);
-			if(isset($catalogue->id)) {	
-				$module = Module::get('Catalogues');
+		if(Module::hasAccess("Souspanoramas", "edit")) {			
+			$souspanorama = Souspanorama::find($id);
+			if(isset($souspanorama->id)) {	
+				$module = Module::get('Souspanoramas');
 				
-				$module->row = $catalogue;
+				$module->row = $souspanorama;
 				
-				return view('la.catalogues.edit', [
+				return view('la.souspanoramas.edit', [
 					'module' => $module,
 					'view_col' => $this->view_col,
-				])->with('catalogue', $catalogue);
+				])->with('souspanorama', $souspanorama);
 			} else {
 				return view('errors.404', [
 					'record_id' => $id,
-					'record_name' => ucfirst("catalogue"),
+					'record_name' => ucfirst("souspanorama"),
 				]);
 			}
 		} else {
@@ -157,7 +157,7 @@ class CataloguesController extends Controller
 	}
 
 	/**
-	 * Update the specified catalogue in storage.
+	 * Update the specified souspanorama in storage.
 	 *
 	 * @param  \Illuminate\Http\Request  $request
 	 * @param  int  $id
@@ -165,9 +165,9 @@ class CataloguesController extends Controller
 	 */
 	public function update(Request $request, $id)
 	{
-		if(Module::hasAccess("Catalogues", "edit")) {
+		if(Module::hasAccess("Souspanoramas", "edit")) {
 			
-			$rules = Module::validateRules("Catalogues", $request, true);
+			$rules = Module::validateRules("Souspanoramas", $request, true);
 			
 			$validator = Validator::make($request->all(), $rules);
 			
@@ -175,9 +175,9 @@ class CataloguesController extends Controller
 				return redirect()->back()->withErrors($validator)->withInput();;
 			}
 			
-			$insert_id = Module::updateRow("Catalogues", $request, $id);
+			$insert_id = Module::updateRow("Souspanoramas", $request, $id);
 			
-			return redirect()->route(config('laraadmin.adminRoute') . '.catalogues.index');
+			return redirect()->route(config('laraadmin.adminRoute') . '.souspanoramas.index');
 			
 		} else {
 			return redirect(config('laraadmin.adminRoute')."/");
@@ -185,18 +185,18 @@ class CataloguesController extends Controller
 	}
 
 	/**
-	 * Remove the specified catalogue from storage.
+	 * Remove the specified souspanorama from storage.
 	 *
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
 	public function destroy($id)
 	{
-		if(Module::hasAccess("Catalogues", "delete")) {
-			Catalogue::find($id)->delete();
+		if(Module::hasAccess("Souspanoramas", "delete")) {
+			Souspanorama::find($id)->delete();
 			
 			// Redirecting to index() method
-			return redirect()->route(config('laraadmin.adminRoute') . '.catalogues.index');
+			return redirect()->route(config('laraadmin.adminRoute') . '.souspanoramas.index');
 		} else {
 			return redirect(config('laraadmin.adminRoute')."/");
 		}
@@ -209,11 +209,11 @@ class CataloguesController extends Controller
 	 */
 	public function dtajax()
 	{
-		$values = DB::table('catalogues')->select($this->listing_cols)->whereNull('deleted_at');
+		$values = DB::table('souspanoramas')->select($this->listing_cols)->whereNull('deleted_at');
 		$out = Datatables::of($values)->make();
 		$data = $out->getData();
 
-		$fields_popup = ModuleFields::getModuleFields('Catalogues');
+		$fields_popup = ModuleFields::getModuleFields('Souspanoramas');
 		
 		for($i=0; $i < count($data->data); $i++) {
 			for ($j=0; $j < count($this->listing_cols); $j++) { 
@@ -222,7 +222,7 @@ class CataloguesController extends Controller
 					$data->data[$i][$j] = ModuleFields::getFieldValue($fields_popup[$col], $data->data[$i][$j]);
 				}
 				if($col == $this->view_col) {
-					$data->data[$i][$j] = '<a href="'.url(config('laraadmin.adminRoute') . '/catalogues/'.$data->data[$i][0]).'">'.$data->data[$i][$j].'</a>';
+					$data->data[$i][$j] = '<a href="'.url(config('laraadmin.adminRoute') . '/souspanoramas/'.$data->data[$i][0]).'">'.$data->data[$i][$j].'</a>';
 				}
 				// else if($col == "author") {
 				//    $data->data[$i][$j];
@@ -231,12 +231,12 @@ class CataloguesController extends Controller
 			
 			if($this->show_action) {
 				$output = '';
-				if(Module::hasAccess("Catalogues", "edit")) {
-					$output .= '<a href="'.url(config('laraadmin.adminRoute') . '/catalogues/'.$data->data[$i][0].'/edit').'" class="btn btn-warning btn-xs" style="display:inline;padding:2px 5px 3px 5px;"><i class="fa fa-edit"></i></a>';
+				if(Module::hasAccess("Souspanoramas", "edit")) {
+					$output .= '<a href="'.url(config('laraadmin.adminRoute') . '/souspanoramas/'.$data->data[$i][0].'/edit').'" class="btn btn-warning btn-xs" style="display:inline;padding:2px 5px 3px 5px;"><i class="fa fa-edit"></i></a>';
 				}
 				
-				if(Module::hasAccess("Catalogues", "delete")) {
-					$output .= Form::open(['route' => [config('laraadmin.adminRoute') . '.catalogues.destroy', $data->data[$i][0]], 'method' => 'delete', 'style'=>'display:inline']);
+				if(Module::hasAccess("Souspanoramas", "delete")) {
+					$output .= Form::open(['route' => [config('laraadmin.adminRoute') . '.souspanoramas.destroy', $data->data[$i][0]], 'method' => 'delete', 'style'=>'display:inline']);
 					$output .= ' <button class="btn btn-danger btn-xs" type="submit"><i class="fa fa-times"></i></button>';
 					$output .= Form::close();
 				}

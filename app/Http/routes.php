@@ -26,7 +26,7 @@ Route::post('/rv','SitefrontController@rv');
 Route::get('/apropos','SitefrontController@apropos');
 Route::get('/domaine','SitefrontController@domaine');
 Route::get('/contact','SitefrontController@contact');
-Route::get('/formation','SitefrontController@formation');
+Route::get('/analyse_donnee','SitefrontController@formation');
 Route::get('/projet','SitefrontController@projet');
 Route::get('/expert','SitefrontController@expert');
 Route::get('/formation/{detail}','SitefrontController@detailFormation');
@@ -36,6 +36,8 @@ Route::post('/email','MailController@sendemail');
 Route::post('/emailrv','MailController@sendrv');
 Route::post('/devis','MailController@devis');
 Route::get('statistique','SitefrontController@stat');
+Route::get('suivie_evaluation','SitefrontController@eval');
+Route::get('gestion_projet','SitefrontController@gestproj');
 
 
 

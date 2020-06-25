@@ -24,7 +24,17 @@
     <link rel="stylesheet" href="/css/style-catalogue.css">
     <link rel="stylesheet" href="/css/themify/themify-icons.css">
     <link rel="stylesheet" href="/css/flaticoncopie.css">
-  
+	<style>
+	.li-item{
+		padding: 10px;
+	}
+
+	.drop_menu{
+		width: 230px !important;
+		border-radius: 0%;
+	}
+	
+	</style>
   </head>
   <body>
 	  <div class="bg-top navbar-light">
@@ -80,12 +90,14 @@
 	        	<li class="nav-item"><a href="/apropos" class="nav-link">Qui sommes nous ?</a></li>
 						<li class="nav-item"><a href="/domaine" class="nav-link">Nos Solutions </a></li>
 						<li class="nav-item"><a href="/solution" class="nav-link">Domaines d’activités</a></li>
-						<li class="dropdown nav-item">
-								<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Notre Catalogue
+						<li class="dropdown nav-item drop-nav">
+								<a class="dropdown-toggle nav-link" data-toggle="dropdown">Notre Catalogue
 								<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-								<li class="nav-item"><a href="{{url(formation)}}" >Panoramas</a></li>
-									<li class="nav-item"><a href="{{url(statistique)}}" >Méthodes statistiques</a></li>
+								<ul class="dropdown-menu drop_menu">
+								<li class="li-item"><a href="{{url(analyse_donnee)}}" >Analyse de données</a></li>
+									<li class="li-item"><a href="{{url(statistique)}}" >Methodes Statistiques</a></li>
+									<li class="li-item"><a href="{{url(suivie_evaluation)}}" >Suivi evaluation</a></li>
+									<li class="li-item"><a href="{{url(gestion_projet)}}" >Gestion de projet</a></li>
 								</ul>
 							</li>
 						 {{-- <li class="nav-item"><a href="/expert" class="nav-link">Nos Experts</a></li> --}}
@@ -93,4 +105,6 @@
 	        </ul>
 	      </div>
 	    </div>
-	  </nav>
+		</nav>
+		
+	

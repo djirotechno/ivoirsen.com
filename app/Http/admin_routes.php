@@ -144,4 +144,13 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== Valeurs ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/valeurs', 'LA\ValeursController');
 	Route::get(config('laraadmin.adminRoute') . '/valeur_dt_ajax', 'LA\ValeursController@dtajax');
+
+	/* ================== Panoramas ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/panoramas', 'LA\PanoramasController');
+	Route::get(config('laraadmin.adminRoute') . '/panorama_dt_ajax', 'LA\PanoramasController@dtajax');
+
+
+		/* ================== SousPanoramas ================== */
+		Route::resource(config('laraadmin.adminRoute') . '/souspanoramas', 'LA\SouspanoramasController');
+		Route::get(config('laraadmin.adminRoute') . '/souspanorama_dt_ajax', 'LA\SouspanoramasController@dtajax');
 });

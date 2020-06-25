@@ -1,7 +1,7 @@
 @include('layout.header')
 		<!-- END nav -->
 		<div id="app">
-				<example-component></example-component>
+			
 			
 			<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
 				<div class="overlay"></div>

@@ -1,14 +1,14 @@
 @extends("la.layouts.app")
 
-@section("contentheader_title", "Catalogues")
-@section("contentheader_description", "Catalogues listing")
-@section("section", "Catalogues")
+@section("contentheader_title", "Souspanoramas")
+@section("contentheader_description", "Souspanoramas listing")
+@section("section", "Souspanoramas")
 @section("sub_section", "Listing")
-@section("htmlheader_title", "Catalogues Listing")
+@section("htmlheader_title", "Souspanoramas Listing")
 
 @section("headerElems")
-@la_access("Catalogues", "create")
-	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add Catalogue</button>
+@la_access("Souspanoramas", "create")
+	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add Souspanorama</button>
 @endla_access
 @endsection
 
@@ -45,34 +45,22 @@
 	</div>
 </div>
 
-@la_access("Catalogues", "create")
+@la_access("Souspanoramas", "create")
 <div class="modal fade" id="AddModal" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Add Catalogue</h4>
+				<h4 class="modal-title" id="myModalLabel">Add Souspanorama</h4>
 			</div>
-			{!! Form::open(['action' => 'LA\CataloguesController@store', 'id' => 'catalogue-add-form']) !!}
+			{!! Form::open(['action' => 'LA\SouspanoramasController@store', 'id' => 'souspanorama-add-form']) !!}
 			<div class="modal-body">
 				<div class="box-body">
                     @la_form($module)
 					
 					{{--
-					@la_input($module, 'code')
 					@la_input($module, 'titre')
-					@la_input($module, 'objectif')
-					@la_input($module, 'contenu')
-					@la_input($module, 'duree')
-					@la_input($module, 'date')
-					@la_input($module, 'prix')
-					@la_input($module, 'niveaux')
-					@la_input($module, 'intervenant')
-					@la_input($module, 'outilslogiciel')
-					@la_input($module, 'prerequis')
-					@la_input($module, 'image')
-					@la_input($module, 'panoramas')
-					@la_input($module, 'souspanoid')
+					@la_input($module, 'description')
 					--}}
 				</div>
 			</div>
@@ -99,7 +87,7 @@ $(function () {
 	$("#example1").DataTable({
 		processing: true,
         serverSide: true,
-        ajax: "{{ url(config('laraadmin.adminRoute') . '/catalogue_dt_ajax') }}",
+        ajax: "{{ url(config('laraadmin.adminRoute') . '/souspanorama_dt_ajax') }}",
 		language: {
 			lengthMenu: "_MENU_",
 			search: "_INPUT_",
@@ -109,7 +97,7 @@ $(function () {
 		columnDefs: [ { orderable: false, targets: [-1] }],
 		@endif
 	});
-	$("#catalogue-add-form").validate({
+	$("#souspanorama-add-form").validate({
 		
 	});
 });

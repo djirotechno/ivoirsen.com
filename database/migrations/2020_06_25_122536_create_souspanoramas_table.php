@@ -8,7 +8,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Dwij\Laraadmin\Models\Module;
 
-class CreateCataloguesTable extends Migration
+class CreateSouspanoramasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,21 +17,9 @@ class CreateCataloguesTable extends Migration
      */
     public function up()
     {
-        Module::generate("Catalogues", 'catalogues', 'intervenant', 'fa-book', [
-            ["code", "code", "String", false, "", 0, 256, true],
-            ["titre", "Titre", "String", true, "", 0, 256, true],
-            ["objectif", "Objectif", "Textarea", false, "", 0, 0, true],
-            ["contenu", "Contenu", "Textarea", false, "", 0, 0, true],
-            ["duree", "Duree", "Integer", false, "", 1, 11, false],
-            ["date", "Date", "Date", false, "", 0, 0, false],
-            ["prix", "Prix", "Float", false, "000", 0, 11, false],
-            ["niveaux", "Nivaux", "Dropdown", false, "", 0, 0, false, ["initiation","intermediaire","Expert","Tout publique"]],
-            ["intervenant", "Intervenent", "Dropdown", false, "", 0, 256, false, "@intervenents"],
-            ["outilslogiciel", "outilsLogiciel", "TextField", false, "", 0, 256, false],
-            ["prerequis", "Prerequis", "TextField", false, "", 0, 256, false],
-            ["image", "Image", "Dropdown", false, "", 0, 0, false, "@uploads"],
-            ["panoramas", "panoramas", "Dropdown", false, "", 0, 0, true, "@panoramas"],
-            ["souspanoid", "souspanoid", "Dropdown", false, "", 0, 0, false, "@souspanoramas"],
+        Module::generate("Souspanoramas", 'souspanoramas', 'titre', 'fa-cube', [
+            ["titre", "Titre", "String", true, "", 0, 256, false],
+            ["description", "Description", "Textarea", false, "", 0, 0, false],
         ]);
 		
 		/*
@@ -77,8 +65,8 @@ class CreateCataloguesTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasTable('catalogues')) {
-            Schema::drop('catalogues');
+        if (Schema::hasTable('souspanoramas')) {
+            Schema::drop('souspanoramas');
         }
     }
 }

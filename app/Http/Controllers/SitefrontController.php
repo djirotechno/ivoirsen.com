@@ -23,6 +23,9 @@ use App\Models\RendezVouse;
 use App\Models\Metier;
 use App\Models\Valeur;
 use DB;
+use App\Models\Panorama;
+use App\Models\Souspanorama;
+
 class SitefrontController extends Controller
 {
     //
@@ -61,20 +64,6 @@ class SitefrontController extends Controller
         ]);
     }
 
-    // public function acceuil(){
-
-    //     $metier = Metier::get();
-        
-    //     $part = Partenaire::get();
-    //     $tem  = Temoignage::where('profile', 'autres')->get();
-    //     $img = Upload::get();
-    //     return view('frontSiteView.index',[
-    //         'tem' => $tem,
-    //         'img' => $img,
-    //         'part' => $part,
-    //         'metier' => $metier
-    //     ]);
-    // }
 
   
     public function apropos()
@@ -110,41 +99,6 @@ class SitefrontController extends Controller
                 ]
         );
         
-    }
-
-    public function formation()
-    {
-        //
-        $formation = DB::table('catalogues')->paginate(8);
-  
-        $img = Upload::get();
-        $formateur = Intervenent::get();
-        $tem  = Temoignage::where('profile', 'etudiants')->get();
-        return view('frontSiteView.formation',[
-
-            'formation'=> $formation,
-            'img' => $img,
-            'formateur' => $formateur,
-            'tem' => $tem
-        ]);
-        
-    }
-
-    public function detailFormation($id){
-        $img = Upload::get();
-        $intervs = Intervenent::get();
-        $detailForm = Catalogue::find($id);
-        $formation = Catalogue::get();
-        $tem  = Temoignage::where('profile', 'etudiants')->get();
-        return view('frontSiteView.detailForm',
-        
-        ['detailForm'=> $detailForm,
-        'img'=> $img,
-        'intervs' => $intervs,
-        'tem' => $tem,
-        'formation' => $formation
-        ]
-    );
     }
 
 
@@ -207,6 +161,25 @@ class SitefrontController extends Controller
         ]);
     }
 
+
+    public function formation()
+    {
+        //
+        $formation = DB::table('catalogues')->paginate(8);
+  
+        $img = Upload::get();
+        $formateur = Intervenent::get();
+        $tem  = Temoignage::where('profile', 'etudiants')->get();
+        return view('frontSiteView.formation',[
+
+            'formation'=> $formation,
+            'img' => $img,
+            'formateur' => $formateur,
+            'tem' => $tem
+        ]);
+        
+    }
+
     public function stat(){
         $formation = Catalogue::get();
         $list = Catalogue::where('code','STAT')->paginate(8);
@@ -217,10 +190,11 @@ class SitefrontController extends Controller
         $st = Catalogue::where('code','ST')->paginate(8);
         $econom = Catalogue::where('code','ECONOM')->paginate(8);
         $logic = Catalogue::where('code','LOGIC')->paginate(8);
+      
 
         $img = Upload::get();
         $formateur = Intervenent::get();
-        $tem  = Temoignage::where('profile', 'etudiants')->get();
+        $tem  = Temoignage::where('profile','etudiants')->get();
         return view('frontSiteView.stat',[
 
            
@@ -235,11 +209,74 @@ class SitefrontController extends Controller
             'ceeq' => $ceeq,
             'st' => $st,
             'econom' => $econom,
-            'logic' => $logic
+            'logic' => $logic,
+           
             ]);
             
     }
 
+    public function eval(){
+
+        $eval = Catalogue::where('code',true)->paginate(8);
+        $img = Upload::get();
+        $formateur = Intervenent::get();
+        $tem  = Temoignage::where('profile','etudiants')->get();
+        return view('frontSiteView.evaluation',[
+
+           
+            'img' => $img,
+            'eval' => $eval,
+            'tem' => $tem,
+            'formateur' => $formateur,
+            ]
+    
+    );
+
+
+    }
+    public  $idpano ;
+    public function gestproj(){
+        
+    
+        $idpano='methodestatistique';
+        $pano = Panorama::where('titre','gestionprojet')->get();
+        $souspano = Souspanorama::get();
+        $formation = Catalogue::get();
+     
+        $img = Upload::get();
+        $formateur = Intervenent::get();
+        $tem  = Temoignage::where('profile','etudiants')->get();
+        return view('frontSiteView.gestprojet',[
+
+          
+            'img' => $img,
+            'tem' => $tem,
+            'formation' => $formation,
+            'formateur' => $formateur,
+            'pano' => $pano,
+            'souspano' => $souspano,
+            'idpano'=> $idpano
+
+
+        ]);
+
+    }
   
     
+    public function detailFormation($id){
+        $img = Upload::get();
+        $intervs = Intervenent::get();
+        $detailForm = Catalogue::find($id);
+        $formation = Catalogue::get();
+        $tem  = Temoignage::where('profile', 'etudiants')->get();
+        return view('frontSiteView.detailForm',
+        
+        ['detailForm'=> $detailForm,
+        'img'=> $img,
+        'intervs' => $intervs,
+        'tem' => $tem,
+        'formation' => $formation
+        ]
+    );
+    }
 }

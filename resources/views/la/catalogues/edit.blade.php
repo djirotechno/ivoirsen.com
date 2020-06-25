@@ -45,6 +45,8 @@
 					@la_input($module, 'outilslogiciel')
 					@la_input($module, 'prerequis')
 					@la_input($module, 'image')
+					@la_input($module, 'panoramas')
+					@la_input($module, 'souspanoid')
 					--}}
                     <br>
 					<div class="form-group">
